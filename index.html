@@ -235,18 +235,18 @@ const AUTOFILL_MAP = {
 const FIELDS = [
   { key:"municipalityName", col:"A", label:"自治体名",         required:true,  type:"text",     placeholder:"例：〇〇市、〇〇町",       hint:"市区町村名を入力" },
   { key:"accountName",      col:"B", label:"登録名（現状）",   required:true,  type:"text",     placeholder:"例：北国からの贈り物〜フィウィター", hint:"アカウント名をそのまま入力" },
-  { key:"department",       col:"C", label:"対象部門",         required:false, type:"text",     placeholder:"確認中" },
-  { key:"project",          col:"D", label:"プロジェクト",     required:false, type:"text",     placeholder:"確認中" },
-  { key:"subsidiarySales",  col:"E", label:"補助科目（販売先）",required:true,  type:"subsidiary", hint:"選択肢にない場合は「その他」を選んで直接入力" },
-  { key:"subdomain2",       col:"G", label:"サブドメイン2",    required:true,  type:"select",   options:["食品","酒類","雑貨・日用品"] },
-  { key:"taxRate",          col:"J", label:"消費税",           required:true,  type:"select",   options:["8%","10%"] },
-  { key:"bankAccount",      col:"K", label:"入金口座",         required:true,  type:"select",   options:["PayPay KG物販","楽天JFG総合","常陽SD売上"] },
+  { key:"department",       col:"C", label:"対象部門",         required:false, type:"text",     placeholder:"確認中", hint:"経理入力欄" },
+  { key:"project",          col:"D", label:"プロジェクト",     required:false, type:"text",     placeholder:"確認中", hint:"経理入力欄" },
+  { key:"subsidiarySales",  col:"E", label:"補助科目（販売先）※中間事業者等",required:true,  type:"subsidiary", hint:"選択肢にない場合は「その他」を選んで直接入力" },
+  { key:"subdomain2",       col:"G", label:"サブドメイン2（商品カテゴリ）", required:true,  type:"select",   options:["食品","酒類","雑貨・日用品"] },
+  { key:"taxRate",          col:"J", label:"消費税（税率）",       required:true,  type:"select",   options:["8%","10%"] },
+  { key:"bankAccount",      col:"K", label:"入金口座",         required:true,  type:"select",   options:["PayPay KG物販：（株）北国からの贈り物名義 ※弟子屈町のみ","常陽SD売上：（株）北国からの贈り物名義 ※弟子屈町以外","楽天JFG総合：日本ふるさと創生（株）名義"] },
   { key:"loginUrl",         col:"M", label:"ログインURL",      required:true,  type:"url",      placeholder:"https://" },
   { key:"id1",              col:"N", label:"ID1",              required:true,  type:"text",     placeholder:"ログインID" },
   { key:"pw1",              col:"O", label:"PW1",              required:true,  type:"password", placeholder:"パスワード" },
-  { key:"id2",              col:"P", label:"ID2",              required:false, type:"text",     placeholder:"サイトによる（任意）" },
-  { key:"pw2",              col:"Q", label:"PW2",              required:false, type:"password", placeholder:"サイトによる（任意）" },
-  { key:"notes",            col:"R", label:"備考欄",           required:false, type:"select",   options:["","allへワンパス","メール受信"], hint:"空欄の場合はそのまま送信" },
+  { key:"id2",              col:"P", label:"ID2（二段階認証の場合）", required:false, type:"text",     placeholder:"サイトによる（任意）" },
+  { key:"pw2",              col:"Q", label:"PW2（二段階認証の場合）", required:false, type:"password", placeholder:"サイトによる（任意）" },
+  { key:"notes",            col:"R", label:"備考欄（メール認証等）", required:false, type:"select",   options:["","allへワンパス","メール受信","all@kitaguni.tv"], hint:"※all@kitaguni.tvを指定してください" },
 ];
 
 const REQUIRED_FIELDS = FIELDS.filter(f => f.required);
