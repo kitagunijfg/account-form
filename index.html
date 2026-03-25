@@ -140,6 +140,8 @@
         経理が後から入力する項目
       </div>
       <div class="grid2">
+        <div><div class="lbl"><span class="badge-col">C</span>対象部門<span class="badge-acct">経理</span></div><input class="fi" value="（経理が入力）" disabled></div>
+        <div><div class="lbl"><span class="badge-col">D</span>プロジェクト<span class="badge-acct">経理</span></div><input class="fi" value="（経理が入力）" disabled></div>
         <div><div class="lbl"><span class="badge-col">F</span>サブドメイン1<span class="badge-acct">経理</span></div><input class="fi" value="（経理が入力）" disabled></div>
         <div><div class="lbl"><span class="badge-col">H</span>サブドメイン3<span class="badge-acct">経理</span></div><input class="fi" value="（経理が入力）" disabled></div>
         <div><div class="lbl"><span class="badge-col">I</span>ファイル名<span class="badge-acct">経理</span></div><input class="fi" value="（経理が入力）" disabled></div>
@@ -235,8 +237,6 @@ const AUTOFILL_MAP = {
 const FIELDS = [
   { key:"municipalityName", col:"A", label:"自治体名",         required:true,  type:"text",     placeholder:"例：〇〇市、〇〇町",       hint:"市区町村名を入力" },
   { key:"accountName",      col:"B", label:"登録名（現状）",   required:true,  type:"text",     placeholder:"例：北国からの贈り物〜フィウィター", hint:"アカウント名をそのまま入力" },
-  { key:"department",       col:"C", label:"対象部門",         required:false, type:"text",     placeholder:"確認中", hint:"経理入力欄" },
-  { key:"project",          col:"D", label:"プロジェクト",     required:false, type:"text",     placeholder:"確認中", hint:"経理入力欄" },
   { key:"subsidiarySales",  col:"E", label:"補助科目（販売先）※中間事業者等",required:true,  type:"subsidiary", hint:"選択肢にない場合は「その他」を選んで直接入力" },
   { key:"subdomain2",       col:"G", label:"サブドメイン2（商品カテゴリ）", required:true,  type:"select",   options:["食品","酒類","雑貨・日用品"] },
   { key:"taxRate",          col:"J", label:"消費税（税率）",       required:true,  type:"select",   options:["8%","10%"] },
