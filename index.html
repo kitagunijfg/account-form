@@ -265,8 +265,12 @@ let selectedDepts = ["sales","accounting","bizdev"];
 let showPw = {};
 
 let gasUrl = "https://script.google.com/macros/s/AKfycby7BMbUtiHFhvhDkokS6Jw8Ibzs2ZCrAhmjcb8LjlMpijB5s-qBW0tYKnsgrRbqkwhF/exec";
-let deptEmails = {};
-try { deptEmails = JSON.parse(localStorage.getItem("deptEmails") || "{}"); } catch(e) {}
+let deptEmails = {
+  "sales": "all@kitaguni.tv",
+  "accounting": "ga@kitaguni.tv",
+  "bizdev": "kozasa@kitaguni.tv"
+};
+try { const saved = JSON.parse(localStorage.getItem("deptEmails") || "{}"); if (Object.keys(saved).length) deptEmails = saved; } catch(e) {}
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // 初期化
