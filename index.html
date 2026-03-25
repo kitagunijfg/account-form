@@ -451,12 +451,15 @@ function onFieldChange(key) {
   el.classList.remove("err");
   document.getElementById("err-" + key).classList.add("hidden");
 
-  // サブドメイン2（商品カテゴリ）選択時に消費税を自動セット
+  // サブドメイン2（商品カテゴリ）選択時に消費税・入金口座を自動セット
   if (key === "subdomain2") {
     const taxMap = { "食品": "8%", "酒類": "10%", "雑貨・日用品": "10%" };
     const autoTax = taxMap[el.value];
     if (autoTax) {
       setFieldValue("taxRate", autoTax);
+    }
+    if (el.value === "酒類") {
+      setFieldValue("bankAccount", "楽天JFG総合：日本ふるさと創生（株）名義 ・（株）北国からの贈り物名義 ※酒販のみ");
     }
   }
 
