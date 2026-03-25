@@ -235,7 +235,7 @@ const AUTOFILL_MAP = {
 // フィールド定義（A〜R列）
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 const FIELDS = [
-  { key:"municipalityName", col:"A", label:"自治体名",         required:true,  type:"text",     placeholder:"例：〇〇市、〇〇町",       hint:"市区町村名を入力" },
+  { key:"municipalityName", col:"A", label:"自治体名",         required:true,  type:"text",     placeholder:"例：北海道弟子屈町、岩手県盛岡市",       hint:"都道府県名＋市区町村名を入力" },
   { key:"accountName",      col:"B", label:"登録名（現状）",   required:true,  type:"text",     placeholder:"例：北国からの贈り物〜フィウィター", hint:"アカウント名をそのまま入力" },
   { key:"subsidiarySales",  col:"E", label:"補助科目（販売先）※中間事業者等",required:true,  type:"subsidiary", hint:"選択肢にない場合は「その他」を選んで直接入力" },
   { key:"subdomain2",       col:"G", label:"サブドメイン2（商品カテゴリ）", required:true,  type:"select",   options:["食品","酒類","雑貨・日用品"] },
