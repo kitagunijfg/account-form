@@ -240,7 +240,7 @@ const FIELDS = [
   { key:"subsidiarySales",  col:"E", label:"補助科目（販売先）※中間事業者等",required:true,  type:"subsidiary", hint:"選択肢にない場合は「その他」を選んで直接入力" },
   { key:"subdomain2",       col:"G", label:"サブドメイン2（商品カテゴリ）", required:true,  type:"select",   options:["食品","酒類","雑貨・日用品"] },
   { key:"taxRate",          col:"J", label:"消費税（税率）",       required:true,  type:"select",   options:["8%","10%"] },
-  { key:"bankAccount",      col:"K", label:"入金口座",         required:true,  type:"select",   options:["PayPay KG物販：（株）北国からの贈り物名義 ※弟子屈町のみ","常陽SD売上：（株）北国からの贈り物名義 ※弟子屈町以外","楽天JFG総合：日本ふるさと創生（株）名義 ・（株）北国からの贈り物名義 ※酒販のみ"] },
+  { key:"bankAccount",      col:"K", label:"入金口座",         required:true,  type:"select",   options:["楽天JFG総合：日本ふるさと創生㈱名義 ・㈱北国からの贈り物名義 ※弟子屈町以外・酒販含む","PayPay KG物販：㈱北国からの贈り物名義 ※弟子屈町のみ"] },
   { key:"loginUrl",         col:"M", label:"ログインURL",      required:true,  type:"url",      placeholder:"https://" },
   { key:"id1",              col:"N", label:"ID1",              required:true,  type:"text",     placeholder:"ログインID" },
   { key:"pw1",              col:"O", label:"PW1",              required:true,  type:"password", placeholder:"パスワード" },
@@ -459,7 +459,7 @@ function onFieldChange(key) {
       setFieldValue("taxRate", autoTax);
     }
     if (el.value === "酒類") {
-      setFieldValue("bankAccount", "楽天JFG総合：日本ふるさと創生（株）名義 ・（株）北国からの贈り物名義 ※酒販のみ");
+      setFieldValue("bankAccount", "楽天JFG総合：日本ふるさと創生㈱名義 ・㈱北国からの贈り物名義 ※弟子屈町以外・酒販含む");
     }
   }
 
